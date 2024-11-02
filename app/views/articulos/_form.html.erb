@@ -1,0 +1,39 @@
+<div class="form-container">
+  <h1>New Artículos</h1> 
+  
+  <%= form_with(model: articulo) do |form| %>
+    <% if articulo.errors.any? %>
+      <div class="error-messages">
+        <h2><%= pluralize(articulo.errors.count, "error") %> prohibited this articulo from being saved:</h2>
+        <ul>
+          <% articulo.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field-container">
+      <%= form.text_field :titulo, placeholder: " " %>
+      <%= form.label :titulo, "Título" %>
+    </div>
+
+    <div class="field-container">
+      <%= form.text_area :contenido, placeholder: " " %>
+      <%= form.label :contenido, "Contenido" %>
+    </div>
+
+    <div class="field-container">
+      <%= form.text_field :usuario_id, placeholder: " " %>
+      <%= form.label :usuario_id, "Usuario" %>
+    </div>
+
+    <div>
+      <%= form.submit "Enviar" %>
+    </div>
+  <% end %>
+
+  <div class="back-link">
+    <a href="/articulos">Back to Artículos</a> 
+  </div>
+</div>

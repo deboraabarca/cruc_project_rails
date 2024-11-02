@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #0E284E; 
+  --secondary-color: #0A3E7D; 
+  --background-color: #cad4e4f9; 
+  --text-color: #333; 
+  --white: #fff; 
+  --border-color: #ddd; 
+  --error-color: red; 
+  --success-color: green; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.field-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: 0.2s ease all;
+  color: var(--primary-color);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: var(--secondary-color);
+}
+
+.error-messages {
+  color: var(--error-color);
+  margin-bottom: 20px;
+}
+
+.back-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-link-text {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.back-link-text:hover {
+  text-decoration: underline;
+}
